@@ -1,39 +1,286 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Portafolio | Backend Developer</title>
 
-<body>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <header>
-        <h1>Mis proyectos</h1>
-    </header>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-    <ul class="topnav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-    <div>
-        <h2>Main Content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis
-            velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat,
-            purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan
-            convallis.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis
-            velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat,
-            purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan
-            convallis.</p>
-    </div>
-    <footer>
-        <p>Diego Iván Fonseca Conde</p>
+  <body class="bg-dark text-light">
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"> Diego Fonseca </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#inicio" class="nav-link">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#sobreMi" class="nav-link">Sobre mí</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#tecnologias" class="nav-link">Tecnologías</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#proyectos" class="nav-link">Proyectos</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contacto" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <section id="inicio" class="container py-5">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <h1 class="display-3 fw-bold">Backend Java Developer</h1>
+
+          <p class="lead">
+            Desarrollo aplicaciones robustas y escalables utilizando Java,
+            Spring Boot y bases de datos relacionales.
+          </p>
+
+          <div class="mt-4">
+            <a href="#proyectos" class="btn btn-primary btn-lg me-2">
+              Ver proyectos
+            </a>
+
+            <a href="assets/cv.pdf" class="btn btn-outline-light btn-lg">
+              Descargar CV
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img
+            src="assets/foto.jpg"
+            class="img-fluid rounded-circle shadow"
+            style="max-width: 300px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mi -->
+
+    <section id="sobreMi" class="container py-5">
+      <h2 class="text-center mb-5">Sobre mí</h2>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="card bg-secondary text-light">
+            <div class="card-body">
+              <p>
+                Soy desarrollador Backend especializado en Java y Spring Boot.
+                Me apasiona diseñar APIs REST, arquitecturas escalables,
+                optimizar bases de datos y construir aplicaciones seguras y
+                mantenibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologias -->
+
+    <section id="tecnologias" class="container py-5">
+      <h2 class="text-center mb-5">Tecnologías</h2>
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <i class="bi bi-cup-hot display-3 text-danger"></i>
+
+              <h4 class="mt-3">Java</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <i class="bi bi-gear-fill display-3 text-success"></i>
+
+              <h4 class="mt-3">Spring Boot</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <i class="bi bi-database-fill display-3 text-primary"></i>
+
+              <h4 class="mt-3">SQL</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <i class="bi bi-code-slash display-3 text-warning"></i>
+
+              <h4 class="mt-3">HTML/CSS/JS</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+
+    <section id="proyectos" class="container py-5">
+      <h2 class="text-center mb-5">Proyectos</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4>Sistema Académico</h4>
+
+              <p>
+                API REST desarrollada con Spring Boot, autenticación JWT y
+                MySQL.
+              </p>
+            </div>
+
+            <div class="card-footer">
+              <a href="#" class="btn btn-dark w-100"> GitHub </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4>E-commerce Backend</h4>
+
+              <p>
+                Backend completo para tienda virtual, gestión de productos,
+                usuarios y pedidos.
+              </p>
+            </div>
+
+            <div class="card-footer">
+              <a href="#" class="btn btn-dark w-100"> GitHub </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4>API de Recomendaciones</h4>
+
+              <p>
+                API REST utilizando MongoDB, Express y arquitectura desacoplada.
+              </p>
+            </div>
+
+            <div class="card-footer">
+              <a href="#" class="btn btn-dark w-100"> GitHub </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+
+    <section id="contacto" class="container py-5">
+      <h2 class="text-center mb-5">Contacto</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <form id="formulario">
+                <div class="mb-3">
+                  <input class="form-control" placeholder="Nombre" required />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Correo"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Mensaje"
+                  ></textarea>
+                </div>
+
+                <button class="btn btn-primary w-100">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black py-4">
+      <div class="container text-center">
+        <p>© 2026 Diego Fonseca</p>
+
+        <div>
+          <a href="#" class="text-light fs-4 me-3">
+            <i class="bi bi-github"></i>
+          </a>
+
+          <a href="#" class="text-light fs-4 me-3">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a href="#" class="text-light fs-4">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
     </footer>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="js/app.js"></script>
+  </body>
 </html>
