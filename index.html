@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Portafolio | Backend Developer</title>
+    <title>Diego Fonseca | Backend Java Developer</title>
 
     <!-- Bootstrap -->
     <link
@@ -17,17 +16,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="bg-dark text-light">
-    <!-- Navbar -->
+  <body>
+    <!--=================================
+                    NAVBAR
+    ==================================-->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#"> Diego Fonseca </a>
+        <a class="navbar-brand fw-bold" href="#inicio"> Diego Fonseca </a>
 
         <button
           class="navbar-toggler"
+          type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
         >
@@ -37,250 +42,487 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="#inicio" class="nav-link">Inicio</a>
+              <a href="#inicio" class="nav-link"> Inicio </a>
             </li>
 
             <li class="nav-item">
-              <a href="#sobreMi" class="nav-link">Sobre mí</a>
+              <a href="#sobre-mi" class="nav-link"> Sobre mí </a>
             </li>
 
             <li class="nav-item">
-              <a href="#tecnologias" class="nav-link">Tecnologías</a>
+              <a href="#habilidades" class="nav-link"> Habilidades </a>
             </li>
 
             <li class="nav-item">
-              <a href="#proyectos" class="nav-link">Proyectos</a>
+              <a href="#roadmap" class="nav-link"> CV </a>
             </li>
 
             <li class="nav-item">
-              <a href="#contacto" class="nav-link">Contacto</a>
+              <a href="#proyectos" class="nav-link"> Proyectos </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contacto" class="nav-link"> Contacto </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Hero -->
+    <!--=================================
+                    HERO
+    ==================================-->
 
-    <section id="inicio" class="container py-5">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-6">
-          <h1 class="display-3 fw-bold">Backend Java Developer</h1>
+    <section id="inicio" class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7">
+            <h1 class="display-2 fw-bold">
+              Backend <br />
+              Java Developer
+            </h1>
 
-          <p class="lead">
-            Desarrollo aplicaciones robustas y escalables utilizando Java,
-            Spring Boot y bases de datos relacionales.
+            <h3 class="text-success mt-4">
+              <span id="typing"></span>
+            </h3>
+
+            <p class="lead mt-4">
+              Desarrollo aplicaciones escalables utilizando Java, Spring Boot y
+              bases de datos relacionales, implementando arquitecturas
+              mantenibles y APIs REST seguras.
+            </p>
+
+            <div class="mt-5">
+              <a href="#proyectos" class="btn btn-success btn-lg me-3">
+                Ver proyectos
+              </a>
+
+              <a
+                href="assets/cv.pdf"
+                class="btn btn-outline-light btn-lg"
+                id="botonCV"
+              >
+                Descargar CV
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <img
+              src="assets/img/foto_perfil.jpeg"
+              alt="Foto perfil"
+              class="img-fluid foto-perfil"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=================================
+                ESTADÍSTICAS
+    ==================================-->
+
+    <section class="container py-5 animacion">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <h1 id="proyectos-contador" class="display-4 text-success">0</h1>
+
+          <h4>Proyectos realizados</h4>
+        </div>
+
+        <div class="col-md-4">
+          <h1 id="tecnologias-contador" class="display-4 text-success">0</h1>
+
+          <h4>Tecnologías</h4>
+        </div>
+
+        <div class="col-md-4">
+          <h1 id="apis-contador" class="display-4 text-success">0</h1>
+
+          <h4>APIs desarrolladas</h4>
+        </div>
+      </div>
+    </section>
+
+    <!--=================================
+                SOBRE MI
+    ==================================-->
+
+    <section id="sobre-mi" class="container py-5 animacion">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Sobre mí</h2>
+      </div>
+
+      <div class="card shadow-lg border-0">
+        <div class="card-body p-5">
+          <p class="lead text-center">
+            Ingeniero de Sistemas con más de 4 años de experiencia en desarrollo
+            de software backend utilizando Java SE, Java EE y Oracle PL/SQL.
+            Experiencia en construcción e integración de servicios SOAP y REST,
+            desarrollo de lógica de negocio, análisis y solución de incidentes,
+            así como acompañamiento en pruebas funcionales y de usuario
+            (QA/UAT). Me caracterizo por mi capacidad analítica, orientación a
+            resultados y trabajo colaborativo, contribuyendo al desarrollo de
+            soluciones robustas y alineadas con las necesidades del negocio.
           </p>
 
-          <div class="mt-4">
-            <a href="#proyectos" class="btn btn-primary btn-lg me-2">
-              Ver proyectos
-            </a>
-
-            <a href="assets/cv.pdf" class="btn btn-outline-light btn-lg">
-              Descargar CV
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-6 text-center">
-          <img
-            src="assets/foto.jpg"
-            class="img-fluid rounded-circle shadow"
-            style="max-width: 300px"
-          />
+          <p class="text-center">
+            Mi objetivo es construir software robusto, seguro y fácil de
+            mantener aplicando principios SOLID, patrones de diseño y
+            metodologías ágiles.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Sobre mi -->
+    <!--=================================
+            HABILIDADES
+==================================-->
 
-    <section id="sobreMi" class="container py-5">
-      <h2 class="text-center mb-5">Sobre mí</h2>
-
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="card bg-secondary text-light">
-            <div class="card-body">
-              <p>
-                Soy desarrollador Backend especializado en Java y Spring Boot.
-                Me apasiona diseñar APIs REST, arquitecturas escalables,
-                optimizar bases de datos y construir aplicaciones seguras y
-                mantenibles.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tecnologias -->
-
-    <section id="tecnologias" class="container py-5">
-      <h2 class="text-center mb-5">Tecnologías</h2>
+    <section id="habilidades" class="container py-5 animacion">
+      <h2 class="text-center fw-bold mb-5">Stack Tecnológico</h2>
 
       <div class="row g-4">
-        <div class="col-md-3">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <i class="bi bi-cup-hot display-3 text-danger"></i>
+        <!-- BACKEND -->
 
-              <h4 class="mt-3">Java</h4>
+        <div class="col-lg-4">
+          <div class="card skill-card h-100 shadow">
+            <div class="card-body text-center">
+              <i class="bi bi-cpu-fill skill-icon"></i>
+
+              <h4 class="mt-3">Backend</h4>
+
+              <div class="mt-4">
+                <span class="skill-badge"> Java </span>
+
+                <span class="skill-badge"> Spring Boot </span>
+
+                <span class="skill-badge"> Spring Security </span>
+
+                <span class="skill-badge"> REST APIs </span>
+
+                <span class="skill-badge"> JPA / Hibernate </span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <i class="bi bi-gear-fill display-3 text-success"></i>
+        <!-- BASES DE DATOS -->
 
-              <h4 class="mt-3">Spring Boot</h4>
+        <div class="col-lg-4">
+          <div class="card skill-card h-100 shadow">
+            <div class="card-body text-center">
+              <i class="bi bi-database-fill skill-icon"></i>
+
+              <h4 class="mt-3">Bases de datos</h4>
+
+              <div class="mt-4">
+                <span class="skill-badge"> MySQL </span>
+
+                <span class="skill-badge"> Oracle SQL </span>
+
+                <span class="skill-badge"> PL/SQL </span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <i class="bi bi-database-fill display-3 text-primary"></i>
+        <!-- FRONTEND -->
 
-              <h4 class="mt-3">SQL</h4>
+        <div class="col-lg-4">
+          <div class="card skill-card h-100 shadow">
+            <div class="card-body text-center">
+              <i class="bi bi-code-slash skill-icon"></i>
+
+              <h4 class="mt-3">Frontend</h4>
+
+              <div class="mt-4">
+                <span class="skill-badge"> HTML5 </span>
+
+                <span class="skill-badge"> CSS3 </span>
+
+                <span class="skill-badge"> JavaScript </span>
+
+                <span class="skill-badge"> Bootstrap </span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="card text-center h-100">
-            <div class="card-body">
-              <i class="bi bi-code-slash display-3 text-warning"></i>
+        <!-- HERRAMIENTAS -->
 
-              <h4 class="mt-3">HTML/CSS/JS</h4>
+        <div class="col-lg-4">
+          <div class="card skill-card h-100 shadow">
+            <div class="card-body text-center">
+              <i class="bi bi-tools skill-icon"></i>
+
+              <h4 class="mt-3">Herramientas</h4>
+
+              <div class="mt-4">
+                <span class="skill-badge"> Git </span>
+
+                <span class="skill-badge"> GitHub </span>
+
+                <span class="skill-badge"> Docker </span>
+
+                <span class="skill-badge"> Maven </span>
+              </div>
             </div>
           </div>
+        </div>
+
+    <!--=================================
+                    ROADMAP
+    ==================================-->
+
+    <section id="roadmap" class="container py-5 animacion">
+      <h2 class="text-center fw-bold mb-5">CV</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Ingeniero de sistemas (2016)</h4>
+          <p>Java y PHP</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>INDRA (2019 - 2024)</h4>
+          <p>
+            Soporte y desarrollo de aplicaciones con lenguaje Java y framework
+            SpringBoot
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Desarrollo web back-end con python y django/flask (2025)</h4>
+          <p>
+            Curso de desarrollo backend con django y construcción de APIs con
+            Flask
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>desarrollador fullstack Generation Colombia (2026)</h4>
+          <p>
+            actualización en conocimientos de desarrollo web con JavaScript,
+            CSS, HTML y backend con spring Boot y MySQL
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Proyectos -->
+    <!--=================================
+                    PROYECTOS
+    ==================================-->
 
-    <section id="proyectos" class="container py-5">
-      <h2 class="text-center mb-5">Proyectos</h2>
+    <section id="proyectos" class="container py-5 animacion">
+      <h2 class="text-center fw-bold mb-5">Proyectos Destacados</h2>
 
       <div class="row g-4">
-        <div class="col-lg-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h4>Sistema tareas To-Do</h4>
+        <!-- PROYECTO 1 -->
 
-              <p>
-                API REST desarrollada con Spring Boot, autenticación JWT y
-                MySQL.
-              </p>
+        <div class="col-lg-4">
+          <div class="card proyecto shadow h-100">
+            <img src="assets/img/clicktech.png" class="card-img-top" alt="Proyecto" />
+
+            <div class="card-body">
+              <h4>E-commerce clicktech</h4>
+
+              <p>E-commerce de tecnología para proveedores de tecnología</p>
             </div>
 
             <div class="card-footer">
-              <a href="https://difctechnology.github.io/taller-todo/" class="btn btn-dark w-100"> GitHub </a>
+              <a
+                href="https://github.com/difcTechnology/Click_tech"
+                class="icono"
+              >
+                <i class="bi bi-github"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h4>E-commerce Backend</h4>
+        <!-- PROYECTO 2 -->
 
-              <p>
-                Backend completo para tienda virtual, gestión de productos,
-                usuarios y pedidos.
-              </p>
+        <div class="col-lg-4">
+          <div class="card proyecto shadow h-100">
+            <img
+              src="assets/img/estudiantes.png"
+              class="card-img-top"
+              alt="Proyecto"
+            />
+
+            <div class="card-body">
+              <h4>API de registro de profesores y estudiantes</h4>
+
+              <p>API construida en Java, spring Boot y JPA</p>
             </div>
 
             <div class="card-footer">
-              <a href="#" class="btn btn-dark w-100"> GitHub </a>
+              <a
+                href="https://github.com/difcTechnology/Click_tech"
+                class="icono"
+              >
+                <i class="bi bi-github"></i>
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- PROYECTO 3 -->
+
         <div class="col-lg-4">
-          <div class="card h-100">
+          <div class="card proyecto shadow h-100">
+            <img src="assets/img/trendyshop.png" class="card-img-top" alt="Proyecto" />
+
             <div class="card-body">
-              <h4>API de Recomendaciones</h4>
+              <h4>Hackaton Trendy shop</h4>
 
               <p>
-                API REST utilizando MongoDB, Express y arquitectura desacoplada.
+                Frontend desarrollado con css javascript y html buscando la
+                solución a un escenario planteado
               </p>
             </div>
 
             <div class="card-footer">
-              <a href="#" class="btn btn-dark w-100"> GitHub </a>
+              <a
+                href="https://github.com/difcTechnology/Click_tech"
+                class="icono"
+              >
+                <i class="bi bi-github"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!--=================================
+                    CONTACTO
+    ==================================-->
 
-    <section id="contacto" class="container py-5">
-      <h2 class="text-center mb-5">Contacto</h2>
+    <section id="contacto" class="container py-5 animacion">
+      <h2 class="text-center fw-bold mb-5">Contacto</h2>
 
       <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <form id="formulario">
-                <div class="mb-3">
-                  <input class="form-control" placeholder="Nombre" required />
-                </div>
-
-                <div class="mb-3">
+        <div class="col-lg-8">
+          <div class="card shadow-lg">
+            <div class="card-body p-5">
+              <form id="contact-form">
+                <div class="mb-4">
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
-                    placeholder="Correo"
+                    placeholder="Nombre"
                     required
+                    id="firstName" name="fi-sender-firstName"
                   />
                 </div>
 
-                <div class="mb-3">
-                  <textarea
+                <div class="mb-4">
+                  <input
+                    type="email"
                     class="form-control"
-                    rows="5"
-                    placeholder="Mensaje"
-                  ></textarea>
+                    placeholder="Correo electrónico"
+                    required
+                    id="email" name="fi-sender-email"
+                  />
                 </div>
 
-                <button class="btn btn-primary w-100">Enviar</button>
+                <div class="mb-4">
+                  <textarea
+                    class="form-control"
+                    rows="6"
+                    placeholder="Mensaje"
+                    required
+                    id="message" name="fi-text-message"
+                  >
+                  </textarea>
+                </div>
+
+                <button class="btn btn-success w-100" type="submit">Enviar mensaje</button>
               </form>
+               <p id="form-status"></p> 
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-black py-4">
-      <div class="container text-center">
-        <p>© 2026 Diego Fonseca</p>
+    <!--=================================
+                    FOOTER
+    ==================================-->
 
-        <div>
-          <a href="#" class="text-light fs-4 me-3">
-            <i class="bi bi-github"></i>
-          </a>
+    <footer class="py-5 text-center">
+      <h4>Construyendo software escalable con Java.</h4>
 
-          <a href="#" class="text-light fs-4 me-3">
-            <i class="bi bi-linkedin"></i>
-          </a>
+      <div class="mt-4">
+        <a href="https://github.com/difcTechnology" class="icono">
+          <i class="bi bi-github"></i>
+        </a>
 
-          <a href="#" class="text-light fs-4">
-            <i class="bi bi-envelope-fill"></i>
-          </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/diego-fonseca-backend-developer"
+          class="icono"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
       </div>
+
+      <p class="mt-4">© 2026 Diego Fonseca.</p>
     </footer>
+
+    <!--=================================
+                BOTÓN ARRIBA
+    ==================================-->
+
+    <button id="volver-arriba" class="btn btn-success rounded-circle">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <a href="https://api.whatsapp.com/send?phone=573012679336&text=Hola,%20quiero%20realizar%20una%20compra" target="_blank">
+  <img src="assets/img/whatsapp2.png" alt="WhatsApp"  id="wathsapp">
+</a>
+
+    <!-- Bootstrap -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- JavaScript -->
+
     <script src="js/app.js"></script>
+    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+  <script>
+    const forminit = new Forminit();
+    const FORM_ID = 'h8yfjgj7ae4';
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    let correo = document.getElementById('email');
+    const button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      
+      status.textContent = 'Sending...';
+      status.className = 'status-loading';
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+      const { data, error } = await forminit.submit(FORM_ID, formData);
+
+      button.disabled = false;
+      button.textContent = 'Send Message';
+
+      if (error) {
+        status.textContent = error.message;
+        status.className = 'status-error';
+        return;
+      }
+
+      status.textContent = 'Message sent successfully!';
+      status.className = 'status-success';
+      form.reset();
+    });
+  </script>
   </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; max-width: 500px; margin: 2rem auto; padding: 0 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    input, textarea, select { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #007bff; }
+    button { background: #007bff; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    .status-loading { color: #666; }
+    .status-success { color: #28a745; }
+    .status-error { color: #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+
+  <form id="contact-form">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="fi-sender-firstName" placeholder="John" required />
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="fi-sender-lastName" placeholder="Doe" required />
+    </div>
+
+    <div class="form-group">
+      <input type="hidden" id="email1" name="fi-sender-email" placeholder="john@example.com" value="difcmail10@gmail.com" />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="fi-text-message" placeholder="Your message..." rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="form-status"></p>
+
+  <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+  <script>
+    const forminit = new Forminit();
+    const FORM_ID = 'h8yfjgj7ae4'; // ← Replace with your Form ID
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    let correo = document.getElementById('email');
+    const button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      
+      status.textContent = 'Sending...';
+      status.className = 'status-loading';
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+      const { data, error } = await forminit.submit(FORM_ID, formData);
+
+      button.disabled = false;
+      button.textContent = 'Send Message';
+
+      if (error) {
+        status.textContent = error.message;
+        status.className = 'status-error';
+        return;
+      }
+
+      status.textContent = 'Message sent successfully!';
+      status.className = 'status-success';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,700 @@
+/*==============================
+            GENERAL
+===============================*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/*==============================
+            NAVBAR
+===============================*/
+
+#navbar {
+    background: rgba(15, 23, 42, 0.90);
+    backdrop-filter: blur(10px);
+    transition: all .4s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+}
+
+#navbar.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    transition: .3s;
+}
+
+.nav-link {
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: #22c55e !important;
+}
+
+
+/*==============================
+                HERO
+===============================*/
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(34, 197, 94, .15),
+            transparent 35%);
+
+    pointer-events: none;
+
+}
+
+
+.hero h1 {
+
+    line-height: 1.2;
+
+}
+
+#typing {
+
+    min-height: 40px;
+    display: inline-block;
+    border-right: 3px solid #22c55e;
+    padding-right: 5px;
+
+}
+
+
+.foto-perfil {
+
+    width: 300px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #22c55e;
+    box-shadow:
+        0 0 40px rgba(34, 197, 94, .5);
+
+    transition: .5s ease;
+
+}
+
+
+.foto-perfil:hover {
+
+    transform:
+        translateY(-15px);
+
+    box-shadow:
+        0 0 60px rgba(34, 197, 94, .8);
+
+}
+
+
+/*==============================
+            BOTONES
+===============================*/
+
+.btn {
+
+    transition: .3s ease;
+
+}
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+/*==============================
+            CARDS
+===============================*/
+
+.card {
+
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: .4s ease;
+    background-color: #1e293b;
+    color: #f8fafc;
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, .4);
+
+}
+
+
+.card-footer {
+
+    background-color: transparent;
+    border: none;
+
+}
+
+
+/*==============================
+          ESTADISTICAS
+===============================*/
+
+.display-4 {
+
+    font-weight: 800;
+
+}
+
+
+/*==============================
+            PROGRESS
+===============================*/
+
+.progress {
+
+    height: 18px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #334155;
+
+}
+
+
+.progress-bar {
+
+    border-radius: 50px;
+    transition: width 2s ease;
+
+}
+
+
+/*==============================
+            TIMELINE
+===============================*/
+
+.timeline {
+
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background-color: #22c55e;
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+.timeline-item {
+
+    position: relative;
+    width: 50%;
+    padding: 25px;
+    margin-bottom: 30px;
+
+}
+
+
+.timeline-item:nth-child(odd) {
+
+    left: 0;
+    text-align: right;
+
+}
+
+
+.timeline-item:nth-child(even) {
+
+    left: 50%;
+
+}
+
+
+.timeline-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 35px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: #22c55e;
+    border-radius: 50%;
+
+}
+
+
+.timeline-item:nth-child(odd)::after {
+
+    right: -10px;
+
+}
+
+
+.timeline-item:nth-child(even)::after {
+
+    left: -10px;
+
+}
+
+
+.timeline-item h4 {
+
+    color: #22c55e;
+
+}
+
+
+/*==============================
+            PROYECTOS
+===============================*/
+
+.proyecto img {
+
+    transition: .5s ease;
+
+}
+
+
+.proyecto:hover img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.proyecto {
+
+    overflow: hidden;
+
+}
+
+
+/*==============================
+            ICONOS
+===============================*/
+
+.icono {
+
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: .3s ease;
+
+}
+
+
+.icono:hover {
+
+    color: #22c55e;
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+/*==============================
+            FOOTER
+===============================*/
+
+footer {
+
+    background-color: #020617;
+    border-top: 1px solid rgba(255, 255, 255, .05);
+
+}
+
+
+/*==============================
+            ANIMACIONES
+===============================*/
+
+.animacion {
+
+    opacity: 0;
+
+    transform:
+        translateY(50px);
+
+    transition:
+        all .9s ease;
+
+}
+
+
+.animacion.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/*==============================
+        BOTON VOLVER ARRIBA
+===============================*/
+
+#volver-arriba {
+
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    display: none;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, .4);
+
+}
+
+
+#volver-arriba.show {
+
+    display: block;
+    animation: aparecer .4s ease;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*==============================
+            FORMULARIO
+===============================*/
+
+.form-control {
+
+    background-color: #334155;
+    color: white;
+    border: none;
+    padding: 15px;
+
+}
+
+
+.form-control:focus {
+
+    box-shadow:
+        0 0 15px rgba(34, 197, 94, .4);
+
+    border: none;
+    background-color: #475569;
+    color: white;
+
+}
+
+
+.form-control::placeholder {
+
+    color: #cbd5e1;
+
+}
+
+
+/*==============================
+            SCROLLBAR
+===============================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background-color: #020617;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background-color: #22c55e;
+    border-radius: 50px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background-color: #16a34a;
+
+}
+
+
+/*==============================
+            RESPONSIVE
+===============================*/
+
+@media(max-width:992px) {
+
+    .hero {
+
+        text-align: center;
+
+    }
+
+    .foto-perfil {
+
+        width: 260px;
+
+    }
+
+}
+
+
+@media(max-width:768px) {
+
+    .timeline::before {
+
+        left: 25px;
+
+    }
+
+
+    .timeline-item {
+
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 60px;
+
+    }
+
+
+    .timeline-item::after {
+
+        left: 15px !important;
+        right: auto;
+
+    }
+
+
+    .display-2 {
+
+        font-size: 3rem;
+
+    }
+
+
+    .foto-perfil {
+
+        width: 220px;
+
+    }
+
+}
+
+
+@media(max-width:576px) {
+
+    .display-2 {
+
+        font-size: 2.5rem;
+
+    }
+
+    section {
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    #volver-arriba {
+
+        width: 50px;
+        height: 50px;
+        right: 20px;
+        bottom: 20px;
+
+    }
+
+}
+
+/*==========================
+        HABILIDADES
+==========================*/
+
+
+.skill-card{
+
+    border:none;
+    border-radius:25px;
+    transition:.4s;
+    background: #1e293b;
+
+}
+
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(25,135,84,.4) !important;
+
+}
+
+
+.skill-icon{
+
+    font-size:3rem;
+    color:#198754;
+
+}
+
+
+.skill-badge{
+
+    display:inline-block;
+
+    padding:
+
+    10px 18px;
+
+    margin:5px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    background:rgba(25,135,84,.15);
+
+    color:#29d17d;
+
+    border:1px solid rgba(25,135,84,.4);
+
+    transition:.3s;
+
+}
+
+
+.skill-badge:hover{
+
+    background:#198754;
+    color:white;
+    transform:scale(1.05);
+
+}
+
+#botonCV{
+    display: none;
+}
+
+#wathsapp{
+    position: fixed;
+        bottom: 20px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+}
+
+#wathsapp:hover {
+
+    transform: translateY(-4px);
+
+}
+
